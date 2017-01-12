@@ -3,11 +3,62 @@ import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import AppBar from 'material-ui/AppBar';
+
+import List from 'material-ui/List';
+import Divider from 'material-ui/Divider';
+
+
 import TeamList from './Team-list'; 
 import Teamstats from './Team-stats';
 import Player from './Player'
 
 export default class App extends Component{
+
+  getPlayers(){
+    return [
+    {
+      _id: 1,
+      name:"varun",
+      ballManipulation: 2,
+      kickingAbilities: 3,
+      passingAbilities:1 ,
+      duelTackling: 2,
+      fieldCoverage: 3,
+      blockingAbilities: 1,
+      gameStrategy: 2,
+      playMakingRisks: 1
+    },
+    {
+      _id: 2,
+      name:"Nishit",
+      ballManipulation: 2,
+      kickingAbilities: 3,
+      passingAbilities:1 ,
+      duelTackling: 2,
+      fieldCoverage: 3,
+      blockingAbilities: 1,
+      gameStrategy: 2,
+      playMakingRisks: 1
+    },
+    {
+      _id: 3,
+      name:"Rana",
+      ballManipulation: 2,
+      kickingAbilities: 3,
+      passingAbilities:1 ,
+      duelTackling: 2,
+      fieldCoverage: 3,
+      blockingAbilities: 1,
+      gameStrategy: 2,
+      playMakingRisks: 1
+    }
+    ];
+  },
+  renderPlayers(){
+    return this.getPlayers().map((player)) =>{
+      <TeamList key={player._id} player={player}/>
+    }
+  }
   render(){
     return (
       <MuiThemeProvider>
@@ -17,8 +68,16 @@ export default class App extends Component{
           showMenuIconButton={false}/>
           <div className="row">
             <div className = "col s12 m7"><Player/></div>
+            <div className = "col s12 m5">
+              <Divider/>          
+              <List>
+                {this.renderPlayers()}
+              </List>
+              <Divider/>
+
+            </div>
             <div className = "col s12 m5"><Teamstats/></div>
-            <div className = "col s12 m5"><TeamList/></div>
+            
           </div>
         </div>
       </MuiThemeProvider>
