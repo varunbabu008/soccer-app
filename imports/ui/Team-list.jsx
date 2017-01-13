@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
-//import {Component} from 'react';
-
+import Avatar from 'material-ui/Avatar';
+import {ListItem} from 'material-ui/List';
+import {ActionDeleteForever} from 'material-ui/svg-icons/action/delete-forever';
 export default class TeamList extends Component{
   render(){
     return (
-      <h1>Team list</h1>
+      <ListItem
+        primaryText={this.props.player.name}
+        leftAvatar={<Avatar src="player.jpg"/>}
+      />
     )
   }
 }
