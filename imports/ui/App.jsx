@@ -31,7 +31,7 @@ export default class App extends Component{
       fieldCoverage: 3,
       blockingAbilities: 1,
       gameStrategy: 2,
-      playMakingRisks: 1
+      playmakingRisks: 1
     },
     {
       _id: 2,
@@ -43,7 +43,7 @@ export default class App extends Component{
       fieldCoverage: 3,
       blockingAbilities: 1,
       gameStrategy: 2,
-      playMakingRisks: 1
+      playmakingRisks: 1
     },
     {
       _id: 3,
@@ -55,7 +55,7 @@ export default class App extends Component{
       fieldCoverage: 3,
       blockingAbilities: 1,
       gameStrategy: 2,
-      playMakingRisks: 1
+      playmakingRisks: 1
     }
     ]});
   }
